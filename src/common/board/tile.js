@@ -1,29 +1,37 @@
 
-const Types = {
-  palace: {
-    movement: 2,
-    gather: 0,
+const types = {
+  special: {
+    palace: {
+      movement: 2,
+      gather: 2,
+    },
+    boss: {
+      movement: 2,
+      gather: 2,
+    },
   },
-  forest: {
-    movement: 1,
-    gather: 2,
-  },
-  mountain: {
-    movement: 2,
-    gather: 2,
-  },
-  swamp: {
-    movement: 1,
-    gather: 2,
-  },
-  field: {
-    movement: 1,
-    gather: 1,
-  },
-  lake: {
-    movement: 1,
-    gather: 2,
-  },
+  regular: {
+    forest: {
+      movement: 1,
+      gather: 2,
+    },
+    mountain: {
+      movement: 2,
+      gather: 2,
+    },
+    swamp: {
+      movement: 1,
+      gather: 2,
+    },
+    field: {
+      movement: 1,
+      gather: 1,
+    },
+    lake: {
+      movement: 1,
+      gather: 2,
+    },
+  }
 }
 
 class Tile {
@@ -35,4 +43,4 @@ class Tile {
 }
 
 
-export { Tile as default, Types }
+export { Tile as default, types }

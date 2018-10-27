@@ -1,9 +1,20 @@
-import Tile from './tile'
+import Tile, { types } from './tile'
 
-class HomeSet {
-  tiles=[
-    [null, Tile(''), Tile('')],
-    [Tile(''), Tile('palace'), Tile('')],
-    [null, Tile(''), Tile('')]
-  ]
-}
+
+let { regular, special } = types
+/*!
+ * Defined sets
+ */
+const homeBasic = [
+  [null, Tile(regular.forest), Tile(regular.mountain)],
+  [Tile(regular.swamp), Tile(special.palace), Tile(regular.field)],
+  [null, Tile(regular.mountain), Tile(regular.field)]
+]
+
+const bossBasic = [
+  [null, Tile(regular.mountain), Tile(regular.mountain)],
+  [Tile(regular.mountain), Tile(special.boss), Tile(regular.mountain)],
+  [null, Tile(regular.mountain), Tile(regular.mountain)]
+]
+
+export { bossBasic, homeBasic }
